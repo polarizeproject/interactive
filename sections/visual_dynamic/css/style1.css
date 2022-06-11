@@ -1,0 +1,391 @@
+body {
+      font-family: "Arial";
+}
+
+
+h3 {
+    position:absolute;
+    font-size: 0.5vw;
+    color: black;
+    bottom:0.6vw;
+    right: 1vw;
+    text-align: right;
+    font-weight: 100;
+  animation-name:slideup;
+  animation-duration:0.3s;
+  animation-fill-mode:forwards;
+  animation-timing-function:ease-out;
+
+  
+}
+@keyframes slideup {
+  0%{bottom:-0.5vw}
+  100%{bottom:0.6vw;}
+}
+
+
+h1 {
+    letter-spacing: 1.1px;
+    position: absolute;
+    top: 0.7vw;
+    left: 2vw;
+    font-size: 1vw;
+    font-weight: 100;
+  animation: text-clip 0.5s cubic-bezier(.77,0,.175,1);}
+
+@keyframes text-clip {
+    from {
+        clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+        transform:translateY(100%)
+    }
+    to {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        transform:translateY(0);
+    }}
+
+
+a, a:hover, a:visited, a:active {
+  color: inherit;
+  text-decoration: none;
+ }
+
+p {
+    font-size: 1vw;
+    position: absolute;
+    margin-top: -30.9%;
+    font-weight: 100;
+    animation-name:slideleft;
+  animation-duration:0.3s;
+  animation-fill-mode:forwards;
+  animation-timing-function:ease-out;
+    
+
+  
+}
+@keyframes slideleft {
+  0%{left:-0.2vw}
+  100%{left:0.5vw;}
+}
+
+
+#lato1 {
+    margin-left: 23.7%; transform: rotate(90deg)}
+#lato2 {
+    margin-left: 47.6%;transform: rotate(90deg)}
+#lato3{
+    margin-left: 71.2%;transform: rotate(90deg)}
+#lato4 {
+    margin-left: 95%;transform: rotate(90deg)}
+
+/* IMMAGINI */
+
+.one {
+    animation: zoomin 1s;
+    transition: 1s ease-in-out;
+}
+.two {
+    animation: zoomin 2s;
+    transition: 1s ease-in-out;
+}
+.three {
+    animation: zoomin 3s;
+    transition: 1s ease-in-out;
+}
+.four {
+    animation: zoomin 4s;
+    transition: 1s ease-in-out;
+}
+
+.one:hover {
+    -webkit-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+.two:hover {
+    -webkit-transform: scale(1.1);
+	transform: scale(1.1);
+}
+.three:hover {
+    -webkit-transform: scale(1.1);
+	transform: scale(1.1);
+}
+.four:hover {
+    -webkit-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+
+#imma1 {
+   display: inline-block;
+    margin-top: 6%;
+    margin-left: 2%;
+    overflow: hidden;
+    width: 330px;
+    height: 470px;
+}
+#imma2 {
+   display: inline-block;
+    margin-top: 6%;
+    margin-left: 2%;
+     overflow: hidden;
+     width: 330px;
+    height: 470px;
+}
+#imma3 {
+   display: inline-block;
+    margin-top: 6%;
+    margin-left: 2%;
+    overflow: hidden;
+     width: 330px;
+    height: 470px;
+}
+#imma4 {
+   display: inline-block;
+    margin-top: 6%;
+    margin-left: 2%;
+    overflow: hidden;
+     width: 330px;
+    height: 470px;
+}
+
+
+
+@keyframes zoomin {
+    0% {
+        transform: scale(0.8,0.8);
+    }
+    100% {
+        transform: scale(1,1);
+    }
+}
+
+
+
+
+
+/* LINEE */
+
+ 
+#line1{
+  height:0px;
+  width:1px;
+  border-bottom:1px solid #000;
+    margin-top: 0.8%;
+    margin-left: 2%;
+  
+  -webkit-animation: increase 2s;
+  -moz-animation:    increase 2s; 
+  -o-animation:      increase 2s; 
+  animation:         increase 2s; 
+  animation-fill-mode: forwards;
+}
+
+@keyframes increase {
+    100% {
+        width: 21.6%;
+    }
+}
+
+
+ 
+#line2{
+  height:0px;
+  width:1px;
+  border-bottom:1px solid #000;
+    margin-top: 0%;
+    margin-left: 26%;
+  
+  -webkit-animation: increase 2s;
+  -moz-animation:    increase 2s; 
+  -o-animation:      increase 2s; 
+  animation:         increase 2s; 
+  animation-fill-mode: forwards;
+}
+
+@keyframes increase {
+    100% {
+        width: 21.6%;
+    }
+}
+
+
+ 
+#line3{
+  height:0px;
+  width:1px;
+  border-bottom:1px solid #000;
+    margin-top: 0%;
+    margin-left: 50.1%;
+  
+  -webkit-animation: increase 2s;
+  -moz-animation:    increase 2s; 
+  -o-animation:      increase 2s; 
+  animation:         increase 2s; 
+  animation-fill-mode: forwards;
+}
+
+@keyframes increase {
+    100% {
+        width: 21.6%;
+    }
+}
+
+
+
+ 
+#line4{
+  height:0px;
+  width:1px;
+  border-bottom:1px solid #000;
+    margin-top: 0%;
+    margin-left: 74%;
+  
+  -webkit-animation: increase 2s;
+  -moz-animation:    increase 2s; 
+  -o-animation:      increase 2s; 
+  animation:         increase 2s; 
+  animation-fill-mode: forwards;
+}
+
+@keyframes increase {
+    100% {
+        width: 21.6%;
+    }
+}
+
+
+/* PARAGRAFI */
+
+#more {
+    margin-top: 2%;
+    margin-left: 2%;
+    font-size: 1.2vw;
+    animation: text-clip 1.5s cubic-bezier(.77,0,.175,1);}
+
+
+
+@keyframes text-clip {
+    from {
+        clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+        transform:translateY(100%)
+    }
+    to {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        transform:translateY(0);
+    }
+}
+#less { margin-top: 2%;
+    margin-left: 25.8%;
+    font-size: 1.2vw;
+animation: text-clip 1.5s cubic-bezier(.77,0,.175,1);}
+
+
+
+@keyframes text-clip {
+    from {
+        clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+        transform:translateY(100%)
+    }
+    to {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        transform:translateY(0);
+    }}
+#stasis { margin-top: 2%;
+    margin-left: 49.7%;
+    font-size: 1.2vw;
+animation: text-clip 1.5s cubic-bezier(.77,0,.175,1);}
+
+
+
+@keyframes text-clip {
+    from {
+        clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+        transform:translateY(100%)
+    }
+    to {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        transform:translateY(0);
+    }}
+#chaos { margin-top: 2%;
+    margin-left: 73.3%;
+    font-size: 1.2vw;
+animation: text-clip 1.5s cubic-bezier(.77,0,.175,1);}
+
+
+
+@keyframes text-clip {
+    from {
+        clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+        transform:translateY(100%)
+    }
+    to {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        transform:translateY(0);
+    }}
+
+
+
+#sottotitolo1 {  margin-top:  0.5%;
+     font-size: 0.7vw;
+    margin-left: 2%;  /* typewriter*/ 
+    	border-right: .1em solid transparent;
+	width: 12.9%;
+	white-space: nowrap;
+	overflow: hidden;
+	-webkit-animation: typing 1s steps(50, end),
+	           blink-caret .5s step-end infinite alternate;
+}
+
+@-webkit-keyframes typing { from { width: 0; } }
+@-webkit-keyframes blink-caret { 50% { border-color: transparent; }
+
+}
+#sottotitolo2 { margin-top:  0.5%;
+    font-size: 0.7vw;
+    margin-left: 25.8%;  /* typewriter*/ 
+    	border-right: .1em solid transparent;
+	width: 14.9%;
+	white-space: nowrap;
+	overflow: hidden;
+	-webkit-animation: typing 1s steps(50, end),
+	           blink-caret .5s step-end infinite alternate;
+}
+
+@-webkit-keyframes typing { from { width: 0; } }
+@-webkit-keyframes blink-caret { 50% { border-color: transparent; }
+
+}
+#sottotitolo3 {margin-top:  0.5%;
+    font-size: 0.7vw;
+    margin-left: 49.7%;
+  /* typewriter*/ 
+    	border-right: .1em solid transparent;
+	width: 17%;
+	white-space: nowrap;
+	overflow: hidden;
+	-webkit-animation: typing 1s steps(50, end),
+	           blink-caret .5s step-end infinite alternate;
+}
+
+@-webkit-keyframes typing { from { width: 0; } }
+@-webkit-keyframes blink-caret { 50% { border-color: transparent; }
+
+}
+#sottotitolo4 { margin-top: 0.5%;
+    font-size: 0.7vw;
+    margin-left: 73.3%;
+     /* typewriter*/ 
+    	border-right: .1em solid transparent;
+	width: 10.8%;
+	white-space: nowrap;
+	overflow: hidden;
+	-webkit-animation: typing 1s steps(50, end),
+	           blink-caret .5s step-end infinite alternate;
+}
+
+@-webkit-keyframes typing { from { width: 0; } }
+@-webkit-keyframes blink-caret { 50% { border-color: transparent; }
+
+}
+
+

@@ -1,0 +1,143 @@
+body {
+      font-family: "Arial";
+}
+
+
+#uno {
+     position:absolute;
+    width: 15%;
+    height: 20%;
+    border: 0.15vw;
+    border-style: solid;
+  top:31%;
+  left:34%;
+    text-align: center;
+       opacity: 0;
+    animation: fadeIn 1s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+#due {
+     position:absolute;
+    width: 15%;
+    height: 20%;
+    border: 0.15vw;
+    border-style: solid;
+  top:31%;
+  left:51%;
+    text-align: center;
+      opacity: 0;
+    animation: fadeIn 1s;
+    animation-delay: 2.5s;
+    animation-fill-mode: forwards;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+    
+#tre {
+     position:absolute;
+    width: 15%;
+    height: 21%;
+ border: 0.15vw;
+    border-style: solid;
+  top:55%;
+  left:34%;
+    text-align: center;
+      opacity: 0;
+    animation: fadeIn 1s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+#quattro {
+     position:absolute;
+    width: 15%;
+    height: 21%;
+   border: 0.15vw;
+    border-style: solid;
+  top:55%;
+  left:51%;
+    text-align: center;
+      opacity: 0;
+    animation: fadeIn 1s;
+    animation-delay: 3.5s;
+    animation-fill-mode: forwards;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+    
+
+p
+{align-content: center;
+    font-size: 0.8vw;
+    padding: 0.2vw;
+    text-align: left;
+    margin-left: 0.4vw;
+}
+
+
+h1 {
+    margin-left:33.5%;
+    margin-top: 9%;
+    font-size: 1.2vw;
+    /* typewriter*/ 
+    	border-right: .1em solid #000;
+	width: 14.5%;
+	white-space: nowrap;
+	overflow: hidden;
+	-webkit-animation: typing 1.5s steps(16, end),
+	           blink-caret .5s step-end infinite alternate;
+}
+
+@-webkit-keyframes typing { from { width: 0; } }
+@-webkit-keyframes blink-caret { 50% { border-color: transparent; }
+
+}
+
+#banda {
+    width: 101%;
+    height: 101;
+    background-color: black;
+    margin-top: -1vw;
+    margin-left: -0.1vw;
+}
+
+
+a, a:hover, a:visited, a:active {
+  color: inherit;
+  text-decoration: none;
+ }
+
+
+h3 {
+    position:absolute;
+    font-size: 0.5vw;
+    color: black;
+    bottom:0.6vw;
+    right: 1vw;
+    text-align: right;
+    font-weight: 100;
+  animation-name:slideup;
+  animation-duration:0.3s;
+  animation-fill-mode:forwards;
+  animation-timing-function:ease-out;
+
+  
+}
+@keyframes slideup {
+  0%{bottom:-0.5vw}
+  100%{bottom:0.6vw;}
+}

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>POLARIZE</title>
+        <link rel="stylesheet" href="css/style1.css">
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+    </head>
+    <body>
+        
+ <a href="../../../../../../../index.html"><h1>POLARIZE - Home</h1></a>
+        
+    <div id="programma">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.6/processing.min.js"></script>
+
+<canvas id="pjs"></canvas></div>
+        
+        <p>CLICK THE GRID TO ACTIVATE THE PROGRAM<BR>CLICK TO FILL AND EMPTY THE BOXES<BR>PRESS THE SPACEBAR TO CLEAR THE GRID<BR>PRESS R TO FILL RANDOM BOXES</p>
+
+<script type="application/processing" data-processing-target="pjs">
+
+
+// Grandezza
+int cellSize = 10;
+
+// HProb
+float probabilityOfAliveAtStart = 15;
+
+// Timer
+int interval = 100;
+int lastRecordedTime = 0;
+
+// Colori
+color alive = color(0);
+color dead = color(255);
+
+// Array cells
+int[][] cells; 
+// Buffer to record the state of the cells and use this 
+// while changing the others in the interations
+int[][] cellsBuffer; 
+
+// Pause
+boolean pause = true;
+
+void setup() {
+  size (700, 500);
+
+  
+  cells = new int[width/cellSize][height/cellSize];
+  cellsBuffer = new int[width/cellSize][height/cellSize];
+
+ 
+  stroke(48);
+  
+
+  noSmooth();
+
+ 
+  
+  background(0); 
+}
+
+
+void draw() {
+
+  //Draw grid
+  for (int x=0; x<width/cellSize; x++) {
+    for (int y=0; y<height/cellSize; y++) {
+      if (cells[x][y]==1) {
+        fill(alive); // If alive
+      }
+      else {
+        fill(dead); 
+      }
+      rect (x*cellSize, y*cellSize, cellSize, cellSize);
+    }
+  }
+ 
+  if (millis()-lastRecordedTime>interval) {
+    if (!pause) {
+      iteration();
+      lastRecordedTime = millis();
+    }
+  }
+
+  if (pause && mousePressed) {
+    // Map and avoid out of bound errors
+    int xCellOver = int(map(mouseX, 0, width, 0, width/cellSize));
+    xCellOver = constrain(xCellOver, 0, width/cellSize-1);
+    int yCellOver = int(map(mouseY, 0, height, 0, height/cellSize));
+    yCellOver = constrain(yCellOver, 0, height/cellSize-1);
+
+    if (cellsBuffer[xCellOver][yCellOver]==1) { 
+      cells[xCellOver][yCellOver]=0; 
+      fill(dead); 
+    }
+    else { 
+      cells[xCellOver][yCellOver]=1; 
+      fill(alive); 
+    }
+  } 
+  else if (pause && !mousePressed) {
+    // Save cells to buffer 
+    for (int x=0; x<width/cellSize; x++) {
+      for (int y=0; y<height/cellSize; y++) {
+        cellsBuffer[x][y] = cells[x][y];
+      }
+    }
+  }
+}
+
+void iteration() { 
+  for (int x=0; x<width/cellSize; x++) {
+    for (int y=0; y<height/cellSize; y++) {
+      cellsBuffer[x][y] = cells[x][y];
+    }
+  }
+
+  
+  for (int x=0; x<width/cellSize; x++) {
+    for (int y=0; y<height/cellSize; y++) {
+      int neighbours = 0; 
+      for (int xx=x-1; xx<=x+1;xx++) {
+        for (int yy=y-1; yy<=y+1;yy++) {  
+          if (((xx>=0)&&(xx<width/cellSize))&&((yy>=0)&&(yy<height/cellSize))) { 
+            if (!((xx==x)&&(yy==y))) { 
+              if (cellsBuffer[xx][yy]==1){
+                neighbours ++; 
+              }
+            } 
+          } 
+        } 
+      } 
+      
+      if (cellsBuffer[x][y]==1) { // Acceso
+        if (neighbours < 2 || neighbours > 3) {
+          cells[x][y] = 0; // Spegni
+        }
+      } 
+      else { // Spento     
+        if (neighbours == 3 ) {
+          cells[x][y] = 1; 
+        }
+      } // End of if
+    } // End of y loop
+  } // End of x loop
+} // End of function
+
+void keyPressed() {
+  if (key=='r' || key == 'R') {
+    // Random 
+    for (int x=0; x<width/cellSize; x++) {
+      for (int y=0; y<height/cellSize; y++) {
+        float state = random (100);
+        if (state > probabilityOfAliveAtStart) {
+          state = 0;
+        }
+        else {
+          state = 1;
+        }
+        cells[x][y] = int(state); // Salva stato
+      }
+    }
+  }
+  
+  if (key==' ' || key == ' ') { // Cancella
+    for (int x=0; x<width/cellSize; x++) {
+      for (int y=0; y<height/cellSize; y++) {
+        cells[x][y] = 0; // Save all to zero
+      }
+    }
+  }
+}
+</script>
+        <h3>Sara Friou ©<br>Accademia Albertina di Belle Arti di Torino</h3>
+        
+        </body>

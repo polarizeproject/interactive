@@ -1,0 +1,98 @@
+
+    html {
+     
+    }
+    body {
+          font-family: 'Arial';
+         font-size: 10px;
+      font-family: 'Arial';
+      display: flex;
+      font-size: 1vw;
+      line-height: 1;
+      overflow: hidden;
+      margin-left: 5%;
+        margin-right: 10%;
+        margin-top: 5%;
+    }
+
+#text {
+    padding: 2%;
+    width: 25%;
+    text-transform: uppercase;
+}
+
+#text2 {
+    padding: 2%;
+    width: 25%;
+    text-transform: uppercase;
+}
+#text3 {
+    padding: 2%;
+    width: 25%;
+    text-transform: uppercase;
+}
+#text4 {
+    padding: 2%;
+    width: 25%;
+    text-transform: uppercase;
+}
+
+
+h1 {
+    letter-spacing: 1.1px;
+    margin-bottom: 2%;
+    position: absolute;
+    top: 0.7vw;
+    left: 2vw;
+    font-size: 1vw;
+    font-weight: 100;
+  animation: text-clip 0.5s cubic-bezier(.77,0,.175,1);}
+
+@keyframes text-clip {
+    from {
+        clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+        transform:translateY(100%)
+    }
+    to {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        transform:translateY(0);
+    }}
+
+
+
+a, a:hover, a:visited, a:active {
+  color: inherit;
+  text-decoration: none;
+ }
+
+
+
+
+h3 {
+    position:absolute;
+    font-size: 0.5vw;
+    color: black;
+    bottom:0.6vw;
+    right: 1vw;
+    text-align: right;
+    font-weight: 100;
+  animation-name:slideup;
+  animation-duration:0.3s;
+  animation-fill-mode:forwards;
+    animation-timing-function:ease-out;}
+
+
+#lato1 {
+    position: absolute;
+    margin-left: 20%; }
+#lato2 {
+    position: absolute;
+    margin-left: 41.5%; }
+#lato3{
+    position: absolute;
+    margin-left: 62.5%; }
+#lato4 {
+    position: absolute;
+    margin-left: 85%; }
+
+
